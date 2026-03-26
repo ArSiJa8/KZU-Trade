@@ -3,12 +3,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/ui'],
 
-  // Vite-spezifische Konfiguration für den Dev-Server
+  devServer: {
+    host: '0.0.0.0',
+    port: 5000
+  },
+
   vite: {
     server: {
-      allowedHosts: [
-        'creational-zena-simulatively.ngrok-free.dev'
-      ]
+      allowedHosts: true
     }
   }
 })
