@@ -59,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-const chartBars = Array.from({ length: 32 }, () => Math.random() * 70 + 15)
+const chartBars = [42, 58, 35, 67, 51, 78, 44, 62, 39, 55, 71, 48, 83, 37, 60, 74, 46, 53, 69, 41, 77, 50, 64, 38, 72, 56, 45, 68, 52, 80, 43, 61]
 
 const assets = [
   { abbr: 'BTC', name: 'Bitcoin',    pair: 'BTC/USD', price: '$67,842',  change:  2.41 },
