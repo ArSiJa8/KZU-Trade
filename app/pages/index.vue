@@ -16,10 +16,10 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <span class="hero-eyebrow">Tauschmarkt · Live Event</span>
+        <span class="hero-eyebrow">KZU Trade · Live Event</span>
         <h1 class="hero-title">Bring was mit.<br><span>Nimm was mit.</span></h1>
         <p class="hero-sub">
-          Ein entspannter Markt zum Tauschen von Dingen — kein Geld, kein Stress, offen für alle.
+          Ein Flohmarkt, aber ohne Geld
         </p>
         <div class="hero-actions">
           <a href="#wann" class="btn btn--primary btn--lg">Wann & Wo →</a>
