@@ -1,36 +1,30 @@
+<script setup lang="ts">
+const menuOpen = ref(false)
+</script>
+
 <template>
-  <header class="nav" :class="{ 'nav--scrolled': scrolled }">
-    <div class="nav__inner">
-      <a href="/" class="nav__logo">
-        <span class="nav__logo-text text-logo">KZU Trade</span>
-      </a>
-
-      <nav aria-label="Main navigation">
-        <ul class="nav__links">
-          <li><a href="#home" class="nav__link nav__link--active">Home</a></li>
-          <li><a href="#about" class="nav__link">Über uns</a></li>
-          <li><a href="#services" class="nav__link">Services</a></li>
-          <li><a href="#market" class="nav__link">Märkte</a></li>
-          <li><a href="#contact" class="nav__link">Kontakt</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav__actions">
-        <a href="#contact" class="btn btn--outline btn--sm">Anmelden</a>
-        <a href="#contact" class="btn btn--primary btn--sm">Jetzt starten</a>
-      </div>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">KZU Trade</a>
+      <ul class="site-nav">
+        <li><a href="#wie">Wie es funktioniert</a></li>
+        <li><a href="#wann">Wann & Wo</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="hamburger" :class="{ 'is-open': menuOpen }" @click="menuOpen = !menuOpen" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <div class="mobile-menu" :class="{ 'is-open': menuOpen }">
+    <ul>
+      <li><a href="#wie" @click="menuOpen = false">Wie es funktioniert</a></li>
+      <li><a href="#wann" @click="menuOpen = false">Wann & Wo</a></li>
+      <li><a href="#kontakt" @click="menuOpen = false">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="mobile-overlay" :class="{ 'is-open': menuOpen }" @click="menuOpen = false" />
 </template>
-
-<script setup lang="ts">
-const scrolled = ref(false)
-
-onMounted(() => {
-  const handleScroll = () => {
-    scrolled.value = window.scrollY > 40
-  }
-  window.addEventListener('scroll', handleScroll, { passive: true })
-  onUnmounted(() => window.removeEventListener('scroll', handleScroll))
-})
-</script>
