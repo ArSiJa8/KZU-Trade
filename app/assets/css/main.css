@@ -1,6 +1,9 @@
-@import "tailwindcss";
+/* 1. externe Schriftarten */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
+/* 2. Framework-Imports */
+@import "tailwindcss";
+@import "@nuxt/ui";
 /* =====================================================
    DESIGN TOKENS
    ===================================================== */
@@ -446,7 +449,6 @@ a {
 }
 
 .rules li::before {
-  content: '✓';
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent);
@@ -593,7 +595,7 @@ a {
   flex-direction: column;
   gap: 0.25rem;
 }
-
+//video
 .mobile-menu ul a {
   display: block;
   padding: 0.85rem 1rem;
@@ -636,4 +638,44 @@ a {
   .hero { padding: 4.5rem 0 3.5rem; }
   .hero-meta { flex-direction: column; gap: 1.25rem; }
   .site-footer .container { flex-direction: column; text-align: center; }
+}
+
+/* =====================================================
+   ProjectProgress
+   ===================================================== */
+.pprogress {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.pprogress li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.25rem;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  transition:
+          border-color var(--t-fast) var(--ease),
+          color var(--t-fast) var(--ease),
+          background var(--t-fast) var(--ease);
+}
+
+.pprogress li:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+  background: var(--bg-3);
+}
+
+.pprogress li::before {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
 }

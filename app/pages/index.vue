@@ -1,11 +1,12 @@
+<script setup lang="ts">
+</script>
 <template>
   <div>
     <HeroSection />
     <HowSection />
     <WhenSection />
-    <AboutUs />
     <RulesSection />
     <ContactSection />
-    <AppFooter />
+    <AboutUs />
   </div>
 </template>

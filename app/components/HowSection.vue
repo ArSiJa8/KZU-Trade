@@ -8,7 +8,7 @@
         <div class="step">
           <div class="step-num">1</div>
           <h3>Mitbringen</h3>
-          <p>Bring Sachen mit, die du nicht mehr brauchst — Kleidung, Bücher, Haushaltswaren, Spielzeug, was auch immer.</p>
+          <p>Bring Sachen mit, die du nicht mehr brauchst — Schulsachen, Bücher, Haushaltswaren, Spielzeug, was auch immer.</p>
         </div>
         <div class="step">
           <div class="step-num">2</div>

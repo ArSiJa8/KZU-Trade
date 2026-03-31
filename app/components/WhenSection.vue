@@ -7,22 +7,22 @@
         <div class="info-card">
           <div class="info-icon">📅</div>
           <h3>Datum</h3>
-          <p>Samstag, 18. April 2026</p>
+          <p>Dienstag, 9. Juni 2026</p>
         </div>
         <div class="info-card">
           <div class="info-icon">🕙</div>
           <h3>Uhrzeit</h3>
-          <p>10:00 – 16:00 Uhr</p>
+          <p>18:00 - 21:00</p>
         </div>
         <div class="info-card">
           <div class="info-icon">📍</div>
           <h3>Ort</h3>
-          <p>Stadtpark Frankfurt<br>Eingang Ostseite</p>
+          <p>KZU<br>Aula</p>
         </div>
         <div class="info-card">
           <div class="info-icon">🎟️</div>
           <h3>Eintritt</h3>
-          <p>Kostenlos<br>Kein Anmelden nötig</p>
+          <p>Kein Anmelden nötig</p>
         </div>
       </div>
     </div>
