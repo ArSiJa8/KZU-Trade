@@ -189,7 +189,11 @@ a {
    HERO
    ===================================================== */
 .hero {
-  padding: 7rem 0 5rem;
+  min-height: calc(100dvh - 74px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   position: relative;
   overflow: hidden;
