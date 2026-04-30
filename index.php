@@ -29,7 +29,7 @@
 
 <div class="gallery">
     <?php
-    // HIER DEN SPEICHERORT EINTRAGEN (Standard ist der Ordner "uploads")
+    // uploads
     $ordner = "uploads/"; 
 
     if (is_dir($ordner)) {
