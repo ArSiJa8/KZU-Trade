@@ -1,1 +1,112 @@
 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    .chat {
+      width: 100%;
+      max-width: 500px;
+      margin: 30px auto;
+      background: white;
+      border: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .msg {
+      padding: 8px 12px;
+      margin: 5px 0;
+      border-radius: 10px;
+      max-width: 70%;
+      word-wrap: break-word;
+    }
+
+    .me {
+      background: #2b7cff;
+      color: white;
+      margin-left: auto;
+    }
+
+    .other {
+      background: #e5e5e5;
+      margin-right: auto;
+    }
+
+    .input {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    .input input {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      outline: none;
+    }
+
+    .input button {
+      padding: 12px;
+      border: none;
+      background: #2b7cff;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="chat">
+
+  <div class="messages" id="messages"></div>
+
+  <div class="input">
+    <input id="text" placeholder="Nachricht...">
+    <button onclick="send()">Senden</button>
+  </div>
+
+</div>
+
+<script>
+  const messages = document.getElementById("messages");
+  const input = document.getElementById("text");
+
+  function send() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage(text, "me");
+    input.value = "";
+
+    // Fake Antwort (nur zum Testen)
+    setTimeout(() => {
+      addMessage("OK 👍", "other");
+    }, 800);
+  }
+
+  function addMessage(text, type) {
+    const div = document.createElement("div");
+    div.classList.add("msg", type);
+    div.innerText = text;
+
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
