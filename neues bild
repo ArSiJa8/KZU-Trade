@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto-Upload Bereich</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 50px; background-color: #f4f4f9; }
+        .upload-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; width: 350px; }
+        input[type="file"] { margin: 20px 0; border: 1px solid #ddd; padding: 10px; width: 100%; border-radius: 5px; }
+        #preview { max-width: 100%; margin-top: 15px; border-radius: 8px; display: none; border: 1px solid #eee; }
+        button { background-color: #28a745; color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%; transition: 0.3s; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+<div class="upload-card">
+    <h2>Foto teilen</h2>
+    <!-- Das Formular schickt die Daten an 'upload.php' -->
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="photo" accept="image/*" required onchange="showPreview()">
+        <img id="preview" src="#" alt="Deine Vorschau">
+        <button type="submit">Jetzt hochladen</button>
+    </form>
+</div>
+
+<script>
+    function showPreview() {
+        const file = document.getElementById('fileInput').files[0];
+        const preview = document.getElementById('preview');
+        const reader = new FileReader();
+
+        reader.onloadend = function() {
+            preview.src = reader.result;
+            preview.style.display = 'block';
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+            preview.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
